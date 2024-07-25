@@ -17,6 +17,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Produtos</title>
     <link href="../uicons-regular-rounded/webfonts/uicons-regular-rounded.css" rel="stylesheet"> <!--load all styles -->
+    <link rel="stylesheet" href="../public/updateProduto.css">
+    
     <style>
         table{border-collapse:separate; border-spacing: 10px; 
         border: 4px solid black; margin: 0 auto;}

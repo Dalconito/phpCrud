@@ -4,23 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./uicons-regular-rounded/webfonts/uicons-regular-rounded.css" rel="stylesheet"> <!--load all styles -->
+    <link rel="stylesheet" href="./public/index.css">
     <title>Pagina Inicial</title>
-    <style>
-      table{border-collapse:separate; border-spacing: 10px; 
-            border: 4px solid black; margin: 0 auto;}
-      table th, table td{padding: 10px; border: 2px solid black}
-      table th{background-color: #e6daa8; text-align: left;}
-      table tr:nth-child(even){background-color: #f9f9f9;}
-      body{margin: 0; background-color: #b4b3b3;}
-      .corpo{display: grid; place-items: center;}
-      .actions {display: flex; justify-content: space-around;align-items: center;}
-      .action-item {display: flex;flex-direction: column;align-items: center;}
-      .action-item span {font-size: 20px; margin-left: 8px;}
-      .fi{font-size: 20px;}
-      a{text-decoration: none; text-decoration-style: none; color: black;}
-      a:link, a:visited,a:hover{text-decoration: none; color: black;}
-      .voltar{padding-top: 20px; padding-left: 20px;}
-    </style>
   </head>
 
 <?php require './controllers/Produtos.php'; $resultQuery = getProduto(); ?>
