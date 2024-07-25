@@ -9,27 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Produtos</title>
     <link href="../uicons-regular-rounded/webfonts/uicons-regular-rounded.css" rel="stylesheet"> <!--load all styles -->
-    <style>
-        table{border-collapse:separate; border-spacing: 10px; 
-        border: 4px solid black; margin: 0 auto;}
-        table th, table td{padding: 10px; border: 2px solid black}
-        table th{background-color: #e6daa8; text-align: left;}
-        table tr:nth-child(even){background-color: #f9f9f9;}
-        body{margin: 0 auto; background-color: #b4b3b3;}
-        .voltarDiv{padding-top: 20px; margin: 0 auto; background-color: #b4b3b3;}
-        .fi{font-size: 20px;}
-        a{text-decoration: none; text-decoration-style: none; color: black;}
-      a:link, a:visited,a:hover{text-decoration: none; color: black;}
-        .icone{font-size: 40px; left: 20px;}
-        .voltar{padding-top: 20px; padding-left: 20px; }
-    </style>
+    <link rel="stylesheet" href="../public/createProduto.css">
 </head>
 <body>
     <a class="voltar" href="../index.php"><i class="fi fi-rr-arrow-to-left icone"></i>Voltar</a>
-    <div class="voltarDiv">
+    <div class="principalDiv">
 
     <form method="post">
-    <table>
+    <table class="tabelaResponsiva">
         <tr>
           <th>Código</th>
           <th>Nome</th>
@@ -39,12 +26,13 @@
         </tr>
 
           <tr>
-            <td><input type="number" id="codProduto" name="codProduto" required></td>
-            <td><input type="text" id="nomeProduto" name="nomeProduto" required></td>
-            <td><input type="text" id="descProduto" name="descProduto" required></td>
-            <td><input type="text" id="qtdeProduto" name="qtdeProduto" required></td>
-            <td><input type="submit" value="Validar"></td>
+            <td data-label="" ><input type="number" id="codProduto" name="codProduto" required></td>
+            <td data-label="" ><input type="text" id="nomeProduto" name="nomeProduto" required></td>
+            <td data-label="" ><input type="text" id="descProduto" name="descProduto" required></td>
+            <td data-label="" ><input type="text" id="qtdeProduto" name="qtdeProduto" required></td>
+            <td data-label="" ><input type="submit" value="Validar"></td>
           </tr>
+    </table>
    </form>
     <?php
         $postProduto = $_POST;
