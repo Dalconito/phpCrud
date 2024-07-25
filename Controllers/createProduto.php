@@ -25,15 +25,15 @@
     </style>
 </head>
 <body>
-    <a class="voltar" href="../index.php"><i class="fi fi-rr-arrow-to-left icone"></i></a>
+    <a class="voltar" href="../index.php"><i class="fi fi-rr-arrow-to-left icone"></i>Voltar</a>
     <div class="voltarDiv">
 
     <form method="post">
     <table>
         <tr>
-          <th>Código do Produto</th>
-          <th>Nome do produto</th>
-          <th>Descrição do Produto do produto</th>
+          <th>Código</th>
+          <th>Nome</th>
+          <th>Descrição</th>
           <th>Quantidade</th>
           <th>Ações</th>
         </tr>

@@ -1,7 +1,7 @@
 <?php
 
 function connectDB(){
-    $servidor = "localhost"; $usuario = "dalconito"; $senha = "HelloWorld"; $banco = "erp"; $porta = "3366";
+    $servidor = "192.168.3.35"; $usuario = "dalconito"; $senha = "HelloWorld"; $banco = "erp"; $porta = "3366";
     $conexao = mysqli_connect($servidor,$usuario,$senha,$banco);
     return $conexao;}
 
@@ -44,5 +44,3 @@ function updateProduto($nomeProduto, $descProduto, $qtdeProduto, $codProduto){$c
     $query->bind_param("ssss", $nomeProduto, $descProduto, $qtdeProduto, $codProduto);
     if($query->execute()) {echo "Update feito com Sucesso: ";} else {echo "Erro: ". $query->error;}
     $query->close(); $conexao->close();}
-
-?>
