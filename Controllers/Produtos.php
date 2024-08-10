@@ -1,6 +1,6 @@
 <?php
 function connectDB(){
-    $servidor = "123"; $usuario = "dalconito"; $senha = "HelloWorld"; $banco = "erp"; $porta = "3366";
+    $servidor = "192.168.3.35"; $usuario = "dalconito"; $senha = "HelloWorld"; $banco = "erp"; $porta = "3366";
     $conexao = mysqli_connect($servidor,$usuario,$senha,$banco);
     return $conexao;}
 
