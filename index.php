@@ -9,29 +9,11 @@
   </head>
 
 <?php require './controllers/Produtos.php'; $resultQuery = getProduto();
-
-// Nome do arquivo de log
 $logFile = 'access_log.txt';
-
-// Capturar o endereço IP do visitante
 $ipAddress = $_SERVER['REMOTE_ADDR'];
-
-// Capturar a data e hora atuais
 $accessTime = date('Y-m-d H:i:s');
-
-// Montar a linha de log
 $logEntry = "IP: $ipAddress - Access Time: $accessTime\n";
-
-// Abrir o arquivo de log para escrita
-$fileHandle = fopen($logFile, 'a');
-
-// Escrever a linha de log no arquivo
-fwrite($fileHandle, $logEntry);
-
-// Fechar o arquivo de log
-fclose($fileHandle);
-
-// Continuação do seu código para a landing page
+//$fileHandle = fopen($logFile, 'a'); fwrite($fileHandle, $logEntry); fclose($fileHandle);
 ?>
   <body>
     <div class="corpo">
