@@ -1,23 +1,23 @@
 <?php
-function connectDB(){
+function connectDbCrud(){
     $servidor = "192.168.3.35"; $usuario = "dalconito"; $senha = "HelloWorld"; $banco = "erp"; $porta = "3366";
     $conexao = mysqli_connect($servidor,$usuario,$senha,$banco);
     return $conexao;}
 
-function getProduto(){$conexao = connectDB();
+function getProduto(){$conexao = connectDbCrud();
     $selectDBquery = "SELECT * FROM produtotestes order by codProduto asc;";
     $resultQuery = mysqli_query($conexao, $selectDBquery);
     $conexao->close();
     return $resultQuery;}
 
-function getProdutobyID($codProduto){$conexao = connectDB();
+function getProdutobyID($codProduto){$conexao = connectDbCrud();
     $selectDbQuery = "SELECT * FROM produtotestes where codProduto = $codProduto ";
     $resultdbQuery = mysqli_query($conexao, $selectDbQuery);
     $resultQuery = mysqli_fetch_assoc($resultdbQuery);
     $conexao->close();
     return $resultQuery;}
 
-function createProduto($codProduto, $nomeProduto, $descProduto, $qtdeProduto) {$conexao = connectDB();
+function createProduto($codProduto, $nomeProduto, $descProduto, $qtdeProduto) {$conexao = connectDbCrud();
     $consultDbQuery = getProdutobyID($codProduto);
     if($consultDbQuery) { echo "Código de Produto Existente";}
     else {
@@ -29,14 +29,14 @@ function createProduto($codProduto, $nomeProduto, $descProduto, $qtdeProduto) {$
         $stmt->close(); $conexao->close();}}
 
 function deleteProduto($codProduto){
-    $conexao = connectDB();
+    $conexao = connectDbCrud();
     $deleteDBquery = "DELETE FROM produtotestes where codProduto = $codProduto";
     $resultQuery = mysqli_query($conexao, $deleteDBquery);
     $conexao->close();
     header('Location: ../index.php');
     return $resultQuery;}
 
-function updateProduto($nomeProduto, $descProduto, $qtdeProduto, $codProduto){$conexao = connectDB();
+function updateProduto($nomeProduto, $descProduto, $qtdeProduto, $codProduto){$conexao = connectDbCrud();
     $updateDbQuery = "  UPDATE produtotestes set nomeProduto=?, descProduto=?, qtdeProduto=? where codProduto=?;";
     $query = $conexao->prepare($updateDbQuery);
     if($query === false){die("Erro no Update: " . $conexao->error);}
